@@ -1,7 +1,7 @@
 
 const monopolyMaxHouses = 88; // original: 32 # 22 x 4 = 88 (max)
 const monopolyMaxHotels = 22; // original: 12 # 22 x 1 = 22 (max)
-const monopolyStartAmount = 8500; // optimal: 8500 ; original: 1500
+const monopolyStartAmount = 17800; // optimal: 8500 ; original: 1500
 
 const escapeHtml = (text) => { // this it performs better, particularly on large blocks of text # https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
 	const map = {

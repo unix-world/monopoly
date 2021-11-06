@@ -115,8 +115,8 @@ td {
 }
 
 #alert {
-	width: 307px;
-	height: 92px;
+	width: 337px; /* unixman ; original: 307px */
+	height: 192px; /* unixman ; original: 92px */
 	margin: 0px;
 	padding-left: 1px;
 	border: 1px solid gray;
