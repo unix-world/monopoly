@@ -110,7 +110,6 @@ td {
 	border: 1px solid gray;
 	border-top: none;
 	width: 302px;
-
 	margin: 0px;
 	text-align: center;
 }
@@ -548,13 +547,12 @@ td {
 }
 
 .die-no-img {
-
-
 	border-radius: 6px;
 	font-weight: bold;
 	border: 2px solid black;
 	padding: 5px 10px;
 }
+
 .house {
 	width: 25px;
 	height: 19px;
@@ -580,7 +578,8 @@ td {
 }
 
 .board-center {
-	width: 675px;
+/*	width: 675px; */
+	width: calc(100vh * 0.8); /* unixman */
 	border: none;
 	vertical-align: bottom;
 	background-repeat: no-repeat;

@@ -1,3 +1,5 @@
+
+
 function Square(name, pricetext, color, price, groupNumber, baserent, rent1, rent2, rent3, rent4, rent5) {
 	this.name = name;
 	this.pricetext = pricetext;
@@ -39,11 +41,11 @@ function corrections() {
 }
 
 function utiltext() {
-	return '&nbsp;&nbsp;&nbsp;&nbsp;If one "Utility" is owned rent is 4 times amount shown on dice.<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;If both "Utilitys" are owned rent is 10 times amount shown on dice.';
+	return '&nbsp;&nbsp;&nbsp;&nbsp;If one "Utility" is owned rent is 4 times amount shown on dice.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;If both "Utilitys" are owned rent is 10 times amount shown on dice.';
 }
 
 function transtext() {
-	return '<div style="font-size: 14px; line-height: 1.5;">Rent<span style="float: right;">$25.</span><br />If 2 Transportations are owned<span style="float: right;">50.</span><br />If 3 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">100.</span><br />If 4 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">200.</span></div>';
+	return '<div style="font-size: 14px; line-height: 1.5;">Rent<span style="float: right;">$25.</span><br>If 2 Transportations are owned<span style="float: right;">50.</span><br>If 3 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">100.</span><br>If 4 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">200.</span></div>';
 }
 
 function citytax() {
@@ -51,18 +53,18 @@ function citytax() {
 
 	if (p.human) {
 
-		buttonAonclick = 'hide("popupbackground"); hide("popupwrap"); var p=player[turn]; addalert(p.name+" paid $200 for landing on City Tax."); p.pay(200, 0);';
-		buttonBonclick = ' hide("popupbackground"); hide("popupwrap"); var p=player[turn]; var cost=p.money; for(var i=0; i<40; i++){sq=square[i]; if(sq.owner==turn) { if(sq.mortgage) { cost+=sq.price*0.5; } else { cost+=sq.price; } cost+=(sq.house*sq.houseprice); } } cost*=0.1; cost=Math.round(cost); addalert(p.name+" paid $"+cost+" for landing on City Tax."); p.pay(cost,0);';
+		buttonAonclick = 'hide("popupbackground"); hide("popupwrap"); var p=player[turn]; UiUtils.addToAlert(p.name+" paid $200 for landing on City Tax."); p.pay(200, 0);';
+		buttonBonclick = ' hide("popupbackground"); hide("popupwrap"); var p=player[turn]; var cost=p.money; for(var i=0; i<40; i++){sq=square[i]; if(sq.owner==turn) { if(sq.mortgage) { cost+=sq.price*0.5; } else { cost+=sq.price; } cost+=(sq.house*sq.houseprice); } } cost*=0.1; cost=Math.round(cost); UiUtils.addToAlert(p.name+" paid $"+cost+" for landing on City Tax."); p.pay(cost,0);';
 
-		popup("You landed on City Tax. You must pay $200 or ten percent of your total worth.<div><input type='button' value='Pay $200' onclick='" + buttonAonclick + "' /><input type='button' value='Pay 10%' onclick='" + buttonBonclick + "' /></div>", false);
+		UiUtils.showPopMsg("You landed on City Tax. You must pay $200 or ten percent of your total worth.<div><input type='button' value='Pay $200' onclick='" + buttonAonclick + "'><input type='button' value='Pay 10%' onclick='" + buttonBonclick + "'></div>", false);
 	} else {
-		addalert(p.name + " paid $200 for landing on City Tax.");
+		UiUtils.addToAlert(p.name + " paid $200 for landing on City Tax.");
 		p.pay(200, 0);
 	}
 }
 
 function luxurytax() {
-	addalert(player[turn].name + " paid $75 for landing on Luxury Tax.");
+	UiUtils.addToAlert(player[turn].name + " paid $75 for landing on Luxury Tax.");
 	player[turn].pay(75, 0);
 
 	$("landed").show().text("You landed on Luxury Tax. Pay $75.");

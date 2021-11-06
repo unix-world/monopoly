@@ -1,16 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 	<title>Monopoly</title>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="jquery.js"></script>
+	<script src="jquery.smart.compat.js"></script>
+
 	<script type="text/javascript" src="classicedition.js"></script>
-	<!-- Comment out the previous line and uncomment the next one to enable the New York City Edition -->
-	<!-- <script type="text/javascript" src="newyorkcityedition.js"></script> -->
+	<!--
+	<script type="text/javascript" src="newyorkcityedition.js"></script>
+	-->
 	<script type="text/javascript" src="ai.js"></script>
 	<script type="text/javascript" src="monopoly.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -18,7 +21,7 @@
 	<div id="popupwrap">
 		<div id="popup">
 			<div style="position: relative;">
-				<!-- <img id="popupclose" src="Images/close.png" title="Close" alt="x" onclick="hide('popupbackground'); hide('popupwrap');" /> -->
+				<!-- <img id="popupclose" src="Images/close.png" title="Close" alt="x" onclick="hide('popupbackground'); hide('popupwrap');"> -->
 				<div id="popuptext"></div>
 				<div id="popupdrag"></div>
 			</div>
@@ -29,7 +32,7 @@
 	<div id="statswrap">
 		<div id="stats">
 			<div style="position: relative;">
-				<img id="statsclose" src="images/close.png" title="Close" alt="x" />
+				<img id="statsclose" src="images/close.png" title="Close" alt="x">
 				<div id="statstext"></div>
 				<div id="statsdrag"></div>
 			</div>
@@ -175,56 +178,56 @@
 		<div id="moneybar">
 			<table>
 				<tr id="moneybarrow1" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p1arrow" class="money-bar-arrow" alt=">"/></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p1arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p1moneybar" class="moneybarcell">
 						<div><span id="p1moneyname" >Player 1</span>:</div>
 						<div>$<span id="p1money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow2" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p2arrow" class="money-bar-arrow" alt=">" /></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p2arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p2moneybar" class="moneybarcell">
 						<div><span id="p2moneyname" >Player 2</span>:</div>
 						<div>$<span id="p2money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow3" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p3arrow" class="money-bar-arrow" alt=">" /></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p3arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p3moneybar" class="moneybarcell">
 						<div><span id="p3moneyname" >Player 3</span>:</div>
 						<div>$<span id="p3money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow4" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p4arrow" class="money-bar-arrow" alt=">" /></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p4arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p4moneybar" class="moneybarcell">
 						<div><span id="p4moneyname" >Player 4</span>:</div>
 						<div>$<span id="p4money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow5" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p5arrow" class="money-bar-arrow" alt=">" /></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p5arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p5moneybar" class="moneybarcell">
 						<div><span id="p5moneyname" >Player 5</span>:</div>
 						<div>$<span id="p5money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow6" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p6arrow" class="money-bar-arrow" alt=">" /></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p6arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p6moneybar" class="moneybarcell">
 						<div><span id="p6moneyname" >Player 6</span>:</div>
 						<div>$<span id="p6money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow7" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p7arrow" class="money-bar-arrow" alt=">" /></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p7arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p7moneybar" class="moneybarcell">
 						<div><span id="p7moneyname" >Player 7</span>:</div>
 						<div>$<span id="p7money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow8" class="money-bar-row">
-					<td class="moneybararrowcell"><img src="images/arrow.png" id="p8arrow" class="money-bar-arrow" alt=">" /></td>
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p8arrow" class="money-bar-arrow" alt="&gt;"></td>
 					<td id="p8moneybar" class="moneybarcell">
 						<div><span id="p8moneyname" >Player 8</span>:</div>
 						<div>$<span id="p8money">1500</span></div>
@@ -233,7 +236,7 @@
 				<tr id="moneybarrowbutton">
 					<td class="moneybararrowcell">&nbsp;</td>
 					<td style="border: none;">
-						<input type="button" id="viewstats" value="View stats" title="View a pop-up window that shows a list of each player's properties." />
+						<input type="button" id="viewstats" value="View stats" title="View a pop-up window that shows a list of each player's properties.">
 					</td>
 				</tr>
 			</table>
@@ -255,7 +258,7 @@
 		</div>
 
 		<div id="player1input" class="player-input">
-			Player 1: <input type="text" id="player1name" title="Player name" maxlength="16" value="Player 1" />
+			Player 1: <input type="text" id="player1name" title="Player name" maxlength="16" value="Player 1">
 			<select id="player1color" title="Player color">
 				<option style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -281,7 +284,7 @@
 		</div>
 
 		<div id="player2input" class="player-input">
-			Player 2: <input type="text" id="player2name" title="Player name" maxlength="16" value="Player 2" />
+			Player 2: <input type="text" id="player2name" title="Player name" maxlength="16" value="Player 2">
 			<select id="player2color" title="Player color">
 				<option style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -307,7 +310,7 @@
 		</div>
 
 		<div id="player3input" class="player-input">
-			Player 3: <input type="text" id="player3name" title="Player name" maxlength="16" value="Player 3" />
+			Player 3: <input type="text" id="player3name" title="Player name" maxlength="16" value="Player 3">
 			<select id="player3color" title="Player color">
 				<option style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -333,7 +336,7 @@
 		</div>
 
 		<div id="player4input" class="player-input">
-			Player 4: <input type="text" id="player4name" title="Player name" maxlength="16" value="Player 4" />
+			Player 4: <input type="text" id="player4name" title="Player name" maxlength="16" value="Player 4">
 			<select id="player4color" title="Player color">
 				<option style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -359,7 +362,7 @@
 		</div>
 
 		<div id="player5input" class="player-input">
-			Player 5: <input type="text" id="player5name" title="Player name" maxlength="16" value="Player 5" />
+			Player 5: <input type="text" id="player5name" title="Player name" maxlength="16" value="Player 5">
 			<select id="player5color" title="Player color">
 				<option style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -385,7 +388,7 @@
 		</div>
 
 		<div id="player6input" class="player-input">
-			Player 6: <input type="text" id="player6name" title="Player name" maxlength="16" value="Player 6" />
+			Player 6: <input type="text" id="player6name" title="Player name" maxlength="16" value="Player 6">
 			<select id="player6color" title="Player color">
 				<option selected="selected" style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -411,7 +414,7 @@
 		</div>
 
 		<div id="player7input" class="player-input">
-			Player 7: <input type="text" id="player7name" title="Player name" maxlength="16" value="Player 7" />
+			Player 7: <input type="text" id="player7name" title="Player name" maxlength="16" value="Player 7">
 			<select id="player7color" title="Player color">
 				<option style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -437,7 +440,7 @@
 		</div>
 
 		<div id="player8input" class="player-input">
-			Player 8: <input type="text" id="player8name" title="Player name" maxlength="16" value="Player 8" />
+			Player 8: <input type="text" id="player8name" title="Player name" maxlength="16" value="Player 8">
 			<select id="player8color" title="Player color">
 				<option style="color: aqua;">Aqua</option>
 				<option style="color: black;">Black</option>
@@ -463,7 +466,7 @@
 		</div>
 
 		<div style="margin: 20px 0px;">
-			<input type="button" value="Start Game" onclick="setup();" title="Begin playing." />
+			<input type="button" value="Start Game" onclick="setup();" title="Begin playing.">
 		</div>
 
 		<div id="noF5">Note: Refreshing this page or navigating away from it may end your game without warning.</div>
@@ -500,9 +503,9 @@
 					<div id="manage">
 						<div id="option">
 							<div id="buildings" title="Available buildings"></div>
-							<input type="button" value="Buy house" id="buyhousebutton"/>
-							<input type="button" value="Mortgage" id="mortgagebutton" />
-							<input type="button" value="Sell house" id="sellhousebutton"/>
+							<input type="button" value="Buy house" id="buyhousebutton">
+							<input type="button" value="Mortgage" id="mortgagebutton">
+							<input type="button" value="Sell house" id="sellhousebutton">
 						</div>
 						<div id="owned"></div>
 					</div>
@@ -521,8 +524,8 @@
 			</tr><tr>
 				<td colspan="2" style="border: none">
 					<div style="padding-top: 8px;">
-						<input type="button" id="nextbutton" title="Roll the dice and move your token accordingly." value="Roll Dice"/>
-						<input type="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();" />
+						<input type="button" id="nextbutton" title="Roll the dice and move your token accordingly." value="Roll Dice">
+						<input type="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();">
 					</div>
 				</td>
 			</tr>
@@ -541,10 +544,10 @@
 			</tr>
 			<tr>
 				<td class="trade-cell">
-					$&nbsp;<input id="trade-leftp-money" value="0" title="Enter amount to exchange with the other player." />
+					$&nbsp;<input id="trade-leftp-money" value="0" title="Enter amount to exchange with the other player.">
 				</td>
 				<td class="trade-cell">
-					$&nbsp;<input id="trade-rightp-money" value="0" title="Enter amount to exchange with the other player." />
+					$&nbsp;<input id="trade-rightp-money" value="0" title="Enter amount to exchange with the other player.">
 				</td>
 			</tr>
 			<tr>
@@ -553,10 +556,10 @@
 			</tr>
 			<tr>
 				<td colspan="2" class="trade-cell">
-					<input type="button" id="proposetradebutton" value="Propose Trade" onclick="game.proposeTrade();" title="Exchange the money and properties that are checked above." />
-					<input type="button" id="canceltradebutton" value="Cancel Trade" onclick='game.cancelTrade();' title="Cancel the trade." />
-					<input type="button" id="accepttradebutton" value="Accept Trade" onclick="game.acceptTrade();" title="Accept the proposed trade." />
-					<input type="button" id="rejecttradebutton" value="Reject Trade" onclick='game.cancelTrade();' title="Reject the proposed trade." />
+					<input type="button" id="proposetradebutton" value="Propose Trade" onclick="game.proposeTrade();" title="Exchange the money and properties that are checked above.">
+					<input type="button" id="canceltradebutton" value="Cancel Trade" onclick='game.cancelTrade();' title="Cancel the trade.">
+					<input type="button" id="accepttradebutton" value="Accept Trade" onclick="game.acceptTrade();" title="Accept the proposed trade.">
+					<input type="button" id="rejecttradebutton" value="Reject Trade" onclick='game.cancelTrade();' title="Reject the proposed trade.">
 				</td>
 			</tr>
 		</table>
